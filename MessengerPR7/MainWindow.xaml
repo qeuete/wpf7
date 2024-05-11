@@ -1,0 +1,49 @@
+﻿<Window x:Class="MessengerPR7.MainWindow"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MessengerPR7"
+        mc:Ignorable="d"
+                Title="MainWindow" Height="300" Width="400" MinHeight="300" MinWidth="400" Background="#FFECC4FF">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="229*"/>
+            <ColumnDefinition Width="171*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock 
+            HorizontalAlignment="Left" VerticalAlignment="Center"
+            FontSize="22"
+            Text="Добро пожаловать в сетевой чат!" Foreground="White" Grid.ColumnSpan="2" Margin="29,0,0,0" />
+        <TextBox x:Name="Name" Background="#FF9424A5" Foreground="White"
+            Grid.Row="1"
+            Margin="5,0,5,0" FontSize="18"  
+            VerticalAlignment="Center"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            materialDesign:HintAssist.Hint="Введите имя пользователя" CaretBrush="{x:Null}" SelectionBrush="{x:Null}" Grid.ColumnSpan="2"   />
+        <Button x:Name="Create" Foreground="White" Background="#FF9424A5" FontSize="18" 
+            Grid.Row="2" Margin="5,7,5,8" 
+           
+            Content="Создать новый чат" BorderBrush="{x:Null}" Click="Create_Click" Grid.ColumnSpan="2" />
+        <Button x:Name="Connect" Foreground="White" Background="#FF9424A5"
+            Grid.Row="3" Margin="5,8,5,8"  FontSize="18" 
+           
+            Content="Присоединиться к текущему чату" BorderBrush="{x:Null}" Click="Connect_Click" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="IP" Background="#FF9424A5" Foreground="White"
+            Grid.Row="4"
+            Margin="5,0,5,0" FontSize="18" 
+            VerticalAlignment="Center"
+            AcceptsReturn="True"
+            TextWrapping="Wrap"
+            materialDesign:HintAssist.Hint="IP адрес чата" Grid.ColumnSpan="2" />
+    </Grid>
+</Window>
